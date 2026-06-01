@@ -1,6 +1,5 @@
 "use client";
 
-import { useEffect } from "react";
 import { Wallet, LogOut, AlertTriangle } from "lucide-react";
 import { useAccount, useConnect, useDisconnect, useSwitchChain } from "wagmi";
 import { baseSepolia } from "wagmi/chains";
@@ -8,20 +7,14 @@ import { shortAddr } from "../lib/fx";
 
 /**
  * Plain-wagmi wallet button — no OnchainKit / Coinbase API key required.
- * Connects via the injected (MetaMask) connector and keeps the user on Base Sepolia.
+ * Connects via the injected (MetaMask) connector. Chain switching is manual
+ * (a button), never an auto-loop.
  */
 export function ConnectWalletButton() {
   const { address, isConnected, chainId } = useAccount();
   const { connect, connectors, isPending } = useConnect();
   const { disconnect } = useDisconnect();
   const { switchChain } = useSwitchChain();
-
-  // Keep the user on Base Sepolia.
-  useEffect(() => {
-    if (isConnected && chainId !== baseSepolia.id) {
-      switchChain?.({ chainId: baseSepolia.id });
-    }
-  }, [isConnected, chainId, switchChain]);
 
   const handleConnect = () => {
     const injected =

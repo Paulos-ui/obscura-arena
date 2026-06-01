@@ -12,23 +12,24 @@
     "@coinbase/onchainkit": "latest",
     "@farcaster/miniapp-sdk": "^0.1.8",
     "@tanstack/react-query": "^5.81.5",
+    "canvas-confetti": "^1.9.3",
     "cofhejs": "^0.3.1",
-    "next": "15.3.4",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
+    "framer-motion": "^11.18.2",
+    "lucide-react": "^0.460.0",
+    "next": "16.2.7",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "react-hot-toast": "^2.4.1",
     "viem": "^2.31.6",
     "wagmi": "^2.16.3",
-    "zustand": "^5.0.8",
-    "framer-motion": "^11.18.2",
-    "react-hot-toast": "^2.4.1",
-    "lucide-react": "^0.460.0",
-    "canvas-confetti": "^1.9.3"
+    "zustand": "^5.0.8"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@farcaster/quick-auth": "^0.0.7",
     "@next/eslint-plugin-next": "^15.3.4",
     "@tailwindcss/postcss": "^4.1.16",
+    "@types/canvas-confetti": "^1.6.4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
@@ -37,7 +38,6 @@
     "eslint-config-next": "15.3.4",
     "postcss": "^8.5.6",
     "tailwindcss": "^4.1.16",
-    "typescript": "^5",
-    "@types/canvas-confetti": "^1.6.4"
+    "typescript": "^5"
   }
 }
